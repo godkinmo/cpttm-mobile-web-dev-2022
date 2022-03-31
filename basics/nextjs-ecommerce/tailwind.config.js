@@ -1,3 +1,4 @@
+const colors = require('tailwindcss/colors')
 
 module.exports = {
   content: [
@@ -6,7 +7,13 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        'warm-gray': colors.warmGray,
+        teal: colors.teal,
+      }
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 }
